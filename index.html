@@ -639,7 +639,32 @@
 			        background: var(--text);
 			        transition: all 0.3s ease;
 			    }
+				.sub-page-container h2 {
+				    font-size: 28px !important;
+				    padding-left: 20px;
+				    margin-top: 20px !important;
+				    }
+				.slide-img-box {
+					width: 92% !important; /* 稍微撐開，比現在更有張力 */
+					height: auto !important;
+					aspect-ratio: 1 / 1 !important; /* 手機端用 1:1 或 4:3 視覺效果最好 */
+					margin: 20px auto !important;
+					border-radius: 24px; /* 維持大圓角質感 */
+				    }
 
+				    .slide-description h3 {
+				        font-size: 22px !important;
+				    }
+    
+				    .slide-description p {
+				        font-size: 14px !important;
+				        padding: 0 10px;
+						line-height: 1.6;
+						color: #9aa0a6; /* 使用變數中的 muted 顏色 */
+						padding: 0 30px; /* 增加兩側內距，避免文字太長難以閱讀 */
+				    }
+
+                }
 			    /* 2. 手機版選單覆蓋層 */
 			    .nav-links {
 			        display: none;
@@ -826,12 +851,11 @@
 
 		/* 4. 縮小圖片下方的文字與圖片的距離 */
 		.slide-img-box {
-		    margin-bottom: 30px !important; /* 從 40px 縮短 */
-			width: 50% !important;        /* 從 80% 縮小到 65%，讓整體比例縮小 */
-			aspect-ratio: 3 / 2;         /* 維持寬螢幕比例 */
-			max-height: 40vh !important;  /* 限制圖片最高不超過螢幕高度的 45% */
-			margin: 0 auto 15px auto !important; /* 居中並減少下方間距 */
-			border-radius:20px;
+			margin: 40px auto 30px auto !important; /* 增加上方間距，解決「太靠上」的問題 */
+			width: 75% !important;                  /* 在平板/桌機上增加寬度，增加視覺份量 */
+			aspect-ratio: 16 / 9;                   /* 採用更標準的寬螢幕比例 */
+			max-height: 50vh !important;  
+			border-radius: 24px;
 		}
 		.slide-img-box img {
 		    width: 100%;
@@ -926,7 +950,7 @@
             </div>
             <div class="small-panel">
                 <img src="assets/paint-main.jpg" alt="Painting">
-                <div class="content"><h4>Painting</h4><p>Premium finishing.</p></div>
+                <div class="content"><h4>ESG</h4><p>Premium finishing.</p></div>
             </div>
         </div>
     </section>
