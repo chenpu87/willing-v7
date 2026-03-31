@@ -796,12 +796,9 @@
 
 			    /* 3. 修正三欄特色區塊 (image_3.png) */
 			    .three-panel-grid {
-					display: grid;
-					    grid-template-columns: repeat(3, 1fr); 
-					    gap: 20px;
-					    max-width: 1100px; /* 縮小寬度以達成窄長比例 */
-					    margin: 50px auto 0;
-			    }
+					        grid-template-columns: 1fr; 
+					        gap: 24px;
+					    }
 
 			    /* 調整單張卡片的高度與比例 */
 				.small-panel {
@@ -812,6 +809,11 @@
 				    overflow: hidden;
 				    /* 移除 aspect-ratio，避免干擾高度 */
 				}
+		        .small-panel {
+				        /* 手機版高度縮小，避免滑動過久 */
+				        height: 500px; 
+				        border-radius: 20px;
+				    }
 			    }
 
 			    /* 調整卡片上的文字大小 */
