@@ -796,18 +796,22 @@
 
 			    /* 3. 修正三欄特色區塊 (image_3.png) */
 			    .three-panel-grid {
-			        grid-template-columns: 1fr; /* 核心：從 3 欄改為單欄 (1 column) */
-			        gap: 20px; /* 卡片之間的間距 */
-			        margin-top: 30px;
+					display: grid;
+					    grid-template-columns: repeat(3, 1fr); 
+					    gap: 20px;
+					    max-width: 1100px; /* 縮小寬度以達成窄長比例 */
+					    margin: 50px auto 0;
 			    }
 
 			    /* 調整單張卡片的高度與比例 */
-			    .small-panel {
-			        height: auto; /* 移除原本的 700px 高度 */
-			        aspect-ratio: 4 / 3; /* 設定一個舒服的橫向比例 (e.g., 4:3) */
-			        border-radius: 16px;
-			        opacity: 1 !important; /* 強制顯示，避免動畫干擾 */
-			        transform: none !important; /* 強制歸位 */
+				.small-panel {
+				    /* 關鍵：改回固定高度以達成直立感 */
+				    height: 700px; 
+				    border-radius: 28px; /* 大圓角質感 */
+				    position: relative;
+				    overflow: hidden;
+				    /* 移除 aspect-ratio，避免干擾高度 */
+				}
 			    }
 
 			    /* 調整卡片上的文字大小 */
@@ -942,7 +946,7 @@
         <div class="three-panel-grid">
             <div class="small-panel">
                 <img src="assets/odm-main.jpg" alt="ODM">
-                <div class="content"><h4>ODM Design</h4><p>Concept to integration.</p></div>
+                <div class="content"><h4>OEM/ODM </h4><p>One-Stop bike manufacturing.</p></div>
             </div>
             <div class="small-panel">
                 <img src="assets/wheels-main.jpg" alt="Wheelsets">
@@ -950,7 +954,7 @@
             </div>
             <div class="small-panel">
                 <img src="assets/paint-main.jpg" alt="Painting">
-                <div class="content"><h4>ESG</h4><p>Premium finishing.</p></div>
+                <div class="content"><h4>Painting</h4><p>Premium finishing.</p></div>
             </div>
         </div>
     </section>
