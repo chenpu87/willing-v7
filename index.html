@@ -934,13 +934,20 @@
 	    <h2 style="font-size:10px; letter-spacing:.3em; color:var(--muted); text-transform: uppercase; margin:0;">ASSEMBLY</h2>
 	    <span style="font-size:10px; color:var(--muted);">PRECISION MANUFACTURING</span>
 	  </div>
-	  <div class="full-panel">
-	    <img src="assets/frame.jpg" alt="Willing Production">
-	    <div class="meta" style="position:absolute; left:50px; bottom:50px; z-index:2;">
-	      <small style="color:var(--accent); letter-spacing: 2px; text-transform: uppercase;">Advanced Line</small>
-	      <h3 style="font-size:42px; font-weight:600; margin:15px 0;">Organized Environment</h3>
-	      <p style="color:#ccc; font-size:17px; max-width:600px;">Highly experienced employees work in a clean environment.</p>
-	    </div>
+	  <div class="full-panel" style="
+	      position: relative; 
+	      width: 100%; 
+	      max-width: 1336px; 
+	      margin: 0 auto; 
+	      overflow: hidden; 
+	      border-radius: 28px; 
+	      aspect-ratio: 16 / 9; /* 關鍵：設定為標準寬螢幕比例，或是 21/9 更窄長 */
+	      height: auto;
+	  ">
+	      <video autoplay muted loop playsinline poster="assets/frame.jpg" 
+	             style="width: 100%; height: 100%; object-fit: cover; display: block;">
+	          <source src="assets/assembly-video.mp4" type="video/mp4">
+	      </video>
 	  </div>
 	</section>
 
