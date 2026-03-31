@@ -797,10 +797,19 @@
 			    }
 
 			    /* 3. 修正三欄特色區塊 (image_3.png) */
-			    .three-panel-grid {
-					        grid-template-columns: 1fr; 
-					        gap: 24px;
-					    }
+			   @media (max-width: 900px) {
+                .three-panel-grid {
+                   display: block !important; /* 改用 block 讓卡片絕對垂直堆疊 */
+                }
+                .small-panel {
+                   width: 100% !important;
+                   height: 500px !important;
+                   margin-bottom: 20px; /* 卡片之間的間距 */
+                 }
+                 
+			   .full-panel {
+                  aspect-ratio: 4 / 3 !important; 
+                 }
 
 			    /* 調整單張卡片的高度與比例 */
 				.small-panel {
